@@ -129,23 +129,49 @@ body {
 .about-section img:hover {
   transform: scale(1.03);
 }
-/* City Cards */
-.city-card img {
-  height: 230px;
-  object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
+/* Featured Cities Section */
 .city-card {
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  height: 450px; /* Increased height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .city-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.city-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Section title underline animation */
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background-color: #395a5c;
+  transition: width 0.3s ease;
+}
+
+.section-title:hover::after {
+  width: 100%;
+}
+
+.section-title:hover {
+  color: #395a5c;
 }
 
 /* Stats */
